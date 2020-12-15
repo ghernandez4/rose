@@ -1,16 +1,22 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => res.send('Hello World!'));
+
+app.listen(port, () => console.log(`Bot listening at http://localhost:${port}`));
+
+
+
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var cron = require('node-cron');
 const dotenv = require('dotenv').config()
 
-/*
-var http = require('http');  
 
-http.createServer(function (req, res) {   
-  res.write("I'm alive");   
-  res.end(); 
-}).listen(8080);
-*/
+
+
 
 const prefix = '-';
  
@@ -72,5 +78,5 @@ client.on('message', message => {
 
   });
 
-client.login(process.env.TOKEN);
+client.login('NzY2ODQ1OTUzMTA5MDAwMjAz.X4pS8g.aprgOkmz3TZrCHPJcgu2mEkQ8vU');
  
